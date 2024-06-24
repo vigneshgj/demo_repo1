@@ -1,0 +1,15 @@
+name: first demo workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  buildjob1:
+    runs-on: ubuntu-latest
+    # Whatever mentioned under steps will be performed sequentially
+    steps:
+      - name: step1
+        uses: actions/checkout@v4
