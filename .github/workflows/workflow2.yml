@@ -1,4 +1,4 @@
-name: first demo workflow
+name: second demo workflow
 
 on:
   push:
