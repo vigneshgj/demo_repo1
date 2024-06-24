@@ -19,4 +19,4 @@ jobs:
     steps:
       # run module is to run the OS command directly
       - name: echo message
-        run: echo hello world
+        run: echo %COMPUTERNAME%
