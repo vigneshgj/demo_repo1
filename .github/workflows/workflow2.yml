@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  workflow_dispatch:    # run enable run workflow button on github repository to trigger manually
 
 jobs:
   buildjob1:
@@ -13,3 +13,10 @@ jobs:
     steps:
       - name: step1
         uses: actions/checkout@v4
+
+  buildjob2:
+    runs-on: windows-latest
+    steps:
+      # run module is to run the OS command directly
+      - name: echo message
+        run: echo hello world
