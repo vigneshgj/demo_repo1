@@ -11,8 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     # Whatever mentioned under steps will be performed sequentially
     steps:
-      - name: step1
+      - name: checkout repository
         uses: actions/checkout@v4
+
+      - name: setup java environment
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: 17
+
+      - name: run java command 
+        run: java --version
 
   buildjob2:
     runs-on: windows-latest
